@@ -1,0 +1,204 @@
+body {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    background: #000000;
+    overflow: hidden;
+}
+
+/* ---------- Image A Login Screen ---------- */
+#login-screen {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+    z-index: 1000;
+}
+
+#login-card {
+    background: #1a1a1a;
+    width: 380px;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+#login-card h2 {
+    margin-top: 0;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+#login-card p {
+    color: #cccccc;
+}
+
+#googleSignInBtn {
+    margin-top: 15px;
+    padding: 10px 18px;
+    font-size: 15px;
+    background: #4285F4;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#googleSignInBtn:hover {
+    background: #357ae8;
+}
+
+/* ---------- 3D container ---------- */
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+
+#menu {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10;
+    display: none;
+}
+
+#menu button {
+    margin: 0 6px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    cursor: pointer;
+}
+
+#menu button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Net Worth Meter */
+#networth-meter {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 12px;
+    z-index: 10;
+    display: none;
+    backdrop-filter: blur(10px);
+}
+
+.meter-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.meter-label {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.meter-bar {
+    width: 200px;
+    height: 20px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #3A9F48, #7BC96F, #FDCA45, #EF3022);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 3D Tiles */
+.element {
+    width: 180px;
+    height: 220px;
+    position: relative;
+    border-radius: 12px;
+    background: rgba(30, 30, 30, 0.95);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.country {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-size: 11px;
+    color: #aaa;
+}
+
+.age {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    font-size: 11px;
+    color: #aaa;
+}
+
+.photo {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+}
+
+.name {
+    position: absolute;
+    top: 125px;
+    left: 0;
+    right: 0;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.interest {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    right: 0;
+    font-size: 12px;
+    color: #bbb;
+    padding: 0 10px;
+}
+
+.networth {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 10px;
+}
+
+.loading {
+    position: absolute;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 900;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 20px;
+}
