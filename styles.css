@@ -64,18 +64,20 @@ body {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    z-index: 10;
+    z-index: 15;
     display: none;
 }
 
 #menu button {
-    margin: 0 6px;
-    padding: 6px 12px;
+    margin: 0 3px;
+    padding: 8px 12px;
     border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     background: rgba(255, 255, 255, 0.1);
     color: #fff;
     cursor: pointer;
+    font-size: 12px;
+    backdrop-filter: blur(10px);
 }
 
 #menu button:hover {
@@ -88,13 +90,14 @@ body {
     bottom: 20px;
     right: 20px;
     background: rgba(255, 255, 255, 0.1);
-    padding: 15px 20px;
+    padding: 12px 16px;
     border-radius: 8px;
     color: #fff;
     font-size: 12px;
     z-index: 10;
     display: none;
     backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .meter-container {
@@ -201,4 +204,127 @@ body {
     background: rgba(0, 0, 0, 0.8);
     color: #fff;
     font-size: 20px;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    #menu {
+        bottom: 15px;
+        width: calc(100% - 40px);
+        left: 20px;
+        transform: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    #menu button {
+        flex: 1;
+        min-width: 85px;
+        max-width: 95px;
+        padding: 10px 6px;
+        font-size: 10px;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #networth-meter {
+        bottom: 70px;
+        right: 10px;
+        left: 10px;
+        padding: 10px 12px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .meter-container {
+        gap: 8px;
+    }
+
+    .meter-bar {
+        width: 100%;
+        max-width: 200px;
+        height: 16px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .meter-label {
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    #login-card {
+        width: calc(100% - 40px);
+        max-width: 380px;
+        margin: 0 20px;
+    }
+
+    .element {
+        width: 160px;
+        height: 200px;
+    }
+
+    .photo {
+        width: 70px;
+        height: 70px;
+        top: 30px;
+    }
+
+    .name {
+        top: 110px;
+        font-size: 14px;
+    }
+
+    .interest {
+        top: 135px;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #menu button {
+        font-size: 9px;
+        padding: 8px 4px;
+        min-width: 75px;
+        max-width: 85px;
+    }
+
+    #networth-meter {
+        bottom: 65px;
+        padding: 8px 10px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    }
+
+    .meter-bar {
+        height: 14px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    }
+
+    .element {
+        width: 140px;
+        height: 180px;
+    }
+
+    .photo {
+        width: 60px;
+        height: 60px;
+        top: 25px;
+    }
+
+    .name {
+        top: 95px;
+        font-size: 13px;
+    }
+
+    .interest {
+        top: 115px;
+        font-size: 10px;
+    }
+
+    .networth {
+        bottom: 10px;
+        font-size: 12px;
+    }
 }
